@@ -149,7 +149,7 @@ h1{
 }
 .main__films{
     margin-top: 24px;
-   /* padding: 30px 29px;*/
+    padding: 30px 29px;
     width:250px;
     height: 200px;
     border-radius: 10px;
@@ -167,6 +167,7 @@ h1{
 }
 .main__film-img{
     position: relative;
+    margin: -30px -29px;
     width: auto;
     height: 100%;
     border-radius: 10px;
