@@ -11,6 +11,7 @@ body{
     background-color: rgba(0,0,0, 0.2);
     background-image: url("../img/main-bg.jpg");
     background-blend-mode: multiply;
+    background-size:auto 100%;
 }
 span{
     color:white;
@@ -27,7 +28,6 @@ h1{
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    border:1px solid red;
     
 }
 .header__logo{
@@ -40,7 +40,6 @@ h1{
     margin-left:70px;
     justify-content: space-between;
     width: 314px;
-    border:1px solid red;
 }
 .header__navigation-link{
     text-decoration: none;
@@ -114,6 +113,8 @@ h1{
     width: 260px;
     height: 65px;
     border-radius: 300px;
+    text-decoration: none;
+    font-family: Roboto;
 }
 .main__span{
     margin-left: 34px;
@@ -130,6 +131,13 @@ h1{
     left:6px;
     box-shadow: 0px 0px 0px 15px rgba(255,255,255, 0.5);
     animation: circle 1500ms ease 0s infinite normal none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main__play-img{
+    position: relative;
+    top:-3px;
 }
 @keyframes circle{
     0%{
@@ -147,30 +155,55 @@ h1{
     font-size: 18px;
     line-height: 150%;  
 }
+.main__all-films{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 .main__films{
     margin-top: 24px;
-    padding: 30px 29px;
-    width:250px;
+    max-width:250px;
+    width: 100%;
     height: 200px;
     border-radius: 10px;
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    position: relative;
+}
+.main__films--disactive{
+    background-color: rgba(11, 11, 34, 0.7);
+    background-blend-mode: normal;
+    transition: background-color 1s ease 0s;
 }
 .main__films--active{
-    background-color: rgba(64, 101, 255, 0.9);
+    background-color: rgba(64, 101, 255, 0.5);
   /*  background-image: url("../img/img-episode-4.png");*/
     background-size: auto 100%;
    /* box-shadow: 0px 10px 26px rgba(0, 0, 0, 0.25);*/
     background-blend-mode: normal;
+    transition: background-color 1s ease 0s;
 }
-.main__film-img{
-    position: relative;
-    margin: -30px -29px;
-    width: auto;
+.main__film-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width:100%;
     height: 100%;
     border-radius: 10px;
+    position: absolute;
+    padding: 30px;
+}
+.main__film-container:hover{
+    background-color: rgba(64, 101, 255, 0.9);
+    transition: background-color 1s ease 0s;
+}
+.main__film-img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   background-position: 50% 50%; 
+   border-radius: 10px;
+   background-size: 50%;
 }
 .main__film-year{
     font-family: Roboto;
@@ -188,6 +221,11 @@ h1{
     line-height: 150%;
     color: #FFFFFF;
 }
+.main__film-rating{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
 .main__rating-title{
     font-family: Roboto;
     font-style: normal;
@@ -195,4 +233,13 @@ h1{
     font-size: 13px;
     line-height: 150%;
     color: #FFFFFF;
+}
+.main__rating-img{
+    margin-left:12px;
+}
+.main__rating-star{
+    fill:white;
+}
+.main__rating-star-empty{
+    fill:none;
 }
