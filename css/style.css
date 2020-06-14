@@ -3,15 +3,19 @@ html{
     padding: 0px 0px;
 }
 body{
+    
     margin: 0px 0px;
     padding:90px 190px;
    /* background-image: url("../img/main-bg.jpg");*/
+    
+    background-color: rgba(5,3,4,1);
+    background-image: url("../img/main-bg.jpg");
     background-repeat:no-repeat ;
     background-attachment: fixed;
-    background-color: rgba(0,0,0, 0.2);
-    background-image: url("../img/main-bg.jpg");
-    background-blend-mode: multiply;
-    background-size:auto 100%;
+    /*background-blend-mode: multiply;*/
+    background-size:100% auto ;
+    background-position: top left;
+    
 }
 span{
     color:white;
@@ -138,6 +142,7 @@ h1{
 .main__play-img{
     position: relative;
     top:-3px;
+    left:-2px;
 }
 @keyframes circle{
     0%{
@@ -146,6 +151,9 @@ h1{
     100%{
         box-shadow: 0px 0px 0px 15px rgba(255,255,255, 0.0);
     }
+}
+.main__episodes{
+    display: block;
 }
 .main__episode-title{
    
@@ -242,4 +250,96 @@ h1{
 }
 .main__rating-star-empty{
     fill:none;
+}
+.main__arrows{
+    margin-top: 27px;
+    padding-left: 13px;
+}
+.main__arrow-left{
+    width:32px;
+    height:32px;
+    margin-left: 15px;
+    margin-top: 27px;
+    background: transparent;
+    border: none;
+    background-image: url("../img/arrow-left.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    outline: none;
+}
+.main__arrow-left span, .main__arrow-right span{
+    display: none;
+}
+.main__arrow-right{
+    margin-left: 15px;
+    margin-top: 27px;
+    width:32px;
+    height:32px;
+   /* transform: rotate(180deg);*/
+    background: transparent;
+    border: none;
+    background-image: url("../img/arrow-right.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    outline: none;
+}
+@media (max-width:880px){
+    body{
+        margin: 0px 0px;
+        padding:90px 120px;
+    }
+}
+@media (max-width:740px){
+    body{
+        margin: 0px 0px;
+        padding:90px 70px;
+    }
+}
+@media (max-width:640px){
+    body{
+        margin: 0px 0px;
+        padding:90px 40px;
+    }
+}
+@media (max-width:580px){
+    body{
+        margin: 0px 0px;
+        padding:90px 20px;
+    }
+}
+@media (max-width: 600px){
+    .main__header-episode-number{
+        font-size: 24px;
+    }
+    .main__header-episode-name{
+        font-size: 36px;
+        margin-bottom: 0px;
+    }
+    .main__films{
+        max-width: none;
+    }
+}
+@media (max-width:540px){
+    .header__navigation{
+        flex-direction: column;
+    }
+    .header__navigation-items{
+        margin-left:0px;
+        margin-top: 20px;
+    }
+    .main{
+       margin-top:20px;
+    }
+    .main__watch{
+        display: flex;
+        justify-content: center;
+    }
+    .main__episodes{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
 }
